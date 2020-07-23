@@ -113,7 +113,7 @@
     "vue": "^2.6.4"
   },
   "publishConfig": {
-    "access": "public"
+    "repository": "https://npm.pkg.github.com/radugroza"
   },
   "vetur": {
     "tags": "dist/json/tags.json",
