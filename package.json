@@ -1,15 +1,18 @@
 {
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "node scripts/prepare-commit-message.js",
-      "commit-msg": "node scripts/lint-commit-message.js",
-      "pre-commit": "node scripts/warn-npm-install.js && yarn run lint && yarn lerna run test"
-    }
+  "name": "@radu.groza/vuetify",
+  "version": "1.0.0",
+  "description": "Vuetify fork",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radugroza/vuetify.git"
   },
+  "author": "radugroza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/radugroza/vuetify/issues"
+  },
+  "homepage": "https://github.com/radugroza/vuetify#readme",
   "scripts": {
     "dev": "node scripts/dev.js",
     "build": "node scripts/build.js",

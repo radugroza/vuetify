@@ -1,16 +1,16 @@
 {
-  "name": "vuetify",
-  "description": "Vue Material Component Framework",
+  "name": "@radu.groza/vuetify",
+  "description": "Vue Material Component Framework Fork",
   "version": "2.3.5",
   "author": {
-    "name": "John Leider",
-    "email": "john@vuetifyjs.com"
+    "name": "Radu Groza",
+    "email": "radu.groza@live.com"
   },
   "license": "MIT",
-  "homepage": "https://vuetifyjs.com",
+  "homepage": "https://github.com/radugroza/vuetify.git",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuetifyjs/vuetify.git",
+    "url": "git+https://github.com/radugroza/vuetify.git",
     "directory": "packages/vuetify"
   },
   "keywords": [
@@ -24,10 +24,6 @@
   ],
   "bugs": {
     "url": "https://issues.vuetifyjs.com"
-  },
-  "funding": {
-    "type": "github",
-    "url": "https://github.com/sponsors/johnleider"
   },
   "main": "dist/vuetify.js",
   "module": "dist/vuetify.js",
