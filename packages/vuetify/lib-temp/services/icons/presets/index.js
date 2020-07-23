@@ -1,0 +1,15 @@
+import mdiSvg from './mdi-svg';
+import md from './md';
+import mdi from './mdi';
+import fa from './fa';
+import fa4 from './fa4';
+import faSvg from './fa-svg';
+export default Object.freeze({
+    mdiSvg,
+    md,
+    mdi,
+    fa,
+    fa4,
+    faSvg,
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9zcmMvc2VydmljZXMvaWNvbnMvcHJlc2V0cy9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLE1BQU0sTUFBTSxXQUFXLENBQUE7QUFDOUIsT0FBTyxFQUFFLE1BQU0sTUFBTSxDQUFBO0FBQ3JCLE9BQU8sR0FBRyxNQUFNLE9BQU8sQ0FBQTtBQUN2QixPQUFPLEVBQUUsTUFBTSxNQUFNLENBQUE7QUFDckIsT0FBTyxHQUFHLE1BQU0sT0FBTyxDQUFBO0FBQ3ZCLE9BQU8sS0FBSyxNQUFNLFVBQVUsQ0FBQTtBQUU1QixlQUFlLE1BQU0sQ0FBQyxNQUFNLENBQUM7SUFDM0IsTUFBTTtJQUNOLEVBQUU7SUFDRixHQUFHO0lBQ0gsRUFBRTtJQUNGLEdBQUc7SUFDSCxLQUFLO0NBQ04sQ0FBQyxDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IG1kaVN2ZyBmcm9tICcuL21kaS1zdmcnXG5pbXBvcnQgbWQgZnJvbSAnLi9tZCdcbmltcG9ydCBtZGkgZnJvbSAnLi9tZGknXG5pbXBvcnQgZmEgZnJvbSAnLi9mYSdcbmltcG9ydCBmYTQgZnJvbSAnLi9mYTQnXG5pbXBvcnQgZmFTdmcgZnJvbSAnLi9mYS1zdmcnXG5cbmV4cG9ydCBkZWZhdWx0IE9iamVjdC5mcmVlemUoe1xuICBtZGlTdmcsXG4gIG1kLFxuICBtZGksXG4gIGZhLFxuICBmYTQsXG4gIGZhU3ZnLFxufSlcbiJdfQ==

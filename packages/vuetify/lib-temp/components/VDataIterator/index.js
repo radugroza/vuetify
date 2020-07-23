@@ -1,0 +1,10 @@
+import VDataIterator from './VDataIterator';
+import VDataFooter from './VDataFooter';
+export { VDataIterator, VDataFooter };
+export default {
+    $_vuetify_subcomponents: {
+        VDataIterator,
+        VDataFooter,
+    },
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvY29tcG9uZW50cy9WRGF0YUl0ZXJhdG9yL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sYUFBYSxNQUFNLGlCQUFpQixDQUFBO0FBQzNDLE9BQU8sV0FBVyxNQUFNLGVBQWUsQ0FBQTtBQUV2QyxPQUFPLEVBQUUsYUFBYSxFQUFFLFdBQVcsRUFBRSxDQUFBO0FBQ3JDLGVBQWU7SUFDYix1QkFBdUIsRUFBRTtRQUN2QixhQUFhO1FBQ2IsV0FBVztLQUNaO0NBQ0YsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBWRGF0YUl0ZXJhdG9yIGZyb20gJy4vVkRhdGFJdGVyYXRvcidcbmltcG9ydCBWRGF0YUZvb3RlciBmcm9tICcuL1ZEYXRhRm9vdGVyJ1xuXG5leHBvcnQgeyBWRGF0YUl0ZXJhdG9yLCBWRGF0YUZvb3RlciB9XG5leHBvcnQgZGVmYXVsdCB7XG4gICRfdnVldGlmeV9zdWJjb21wb25lbnRzOiB7XG4gICAgVkRhdGFJdGVyYXRvcixcbiAgICBWRGF0YUZvb3RlcixcbiAgfSxcbn1cbiJdfQ==

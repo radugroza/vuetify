@@ -1,0 +1,15 @@
+import icons from './fa';
+export function convertToComponentDeclarations(component, iconSet) {
+    const result = {};
+    for (const key in iconSet) {
+        result[key] = {
+            component,
+            props: {
+                icon: iconSet[key].split(' fa-'),
+            },
+        };
+    }
+    return result;
+}
+export default convertToComponentDeclarations('font-awesome-icon', icons);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmEtc3ZnLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vc3JjL3NlcnZpY2VzL2ljb25zL3ByZXNldHMvZmEtc3ZnLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBLE9BQU8sS0FBSyxNQUFNLE1BQU0sQ0FBQTtBQUV4QixNQUFNLFVBQVUsOEJBQThCLENBQzVDLFNBQTZCLEVBQzdCLE9BQXFCO0lBRXJCLE1BQU0sTUFBTSxHQUEwQixFQUFFLENBQUE7SUFFeEMsS0FBSyxNQUFNLEdBQUcsSUFBSSxPQUFPLEVBQUU7UUFDekIsTUFBTSxDQUFDLEdBQUcsQ0FBQyxHQUFHO1lBQ1osU0FBUztZQUNULEtBQUssRUFBRTtnQkFDTCxJQUFJLEVBQUcsT0FBTyxDQUFDLEdBQUcsQ0FBWSxDQUFDLEtBQUssQ0FBQyxNQUFNLENBQUM7YUFDN0M7U0FDRixDQUFBO0tBQ0Y7SUFFRCxPQUFPLE1BQXNCLENBQUE7QUFDL0IsQ0FBQztBQUVELGVBQWUsOEJBQThCLENBQUMsbUJBQW1CLEVBQUUsS0FBSyxDQUFDLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBWdWV0aWZ5SWNvbnMgfSBmcm9tICd2dWV0aWZ5L3R5cGVzL3NlcnZpY2VzL2ljb25zJ1xuaW1wb3J0IHsgQ29tcG9uZW50IH0gZnJvbSAndnVlJ1xuaW1wb3J0IGljb25zIGZyb20gJy4vZmEnXG5cbmV4cG9ydCBmdW5jdGlvbiBjb252ZXJ0VG9Db21wb25lbnREZWNsYXJhdGlvbnMgKFxuICBjb21wb25lbnQ6IENvbXBvbmVudCB8IHN0cmluZyxcbiAgaWNvblNldDogVnVldGlmeUljb25zLFxuKSB7XG4gIGNvbnN0IHJlc3VsdDogUGFydGlhbDxWdWV0aWZ5SWNvbnM+ID0ge31cblxuICBmb3IgKGNvbnN0IGtleSBpbiBpY29uU2V0KSB7XG4gICAgcmVzdWx0W2tleV0gPSB7XG4gICAgICBjb21wb25lbnQsXG4gICAgICBwcm9wczoge1xuICAgICAgICBpY29uOiAoaWNvblNldFtrZXldIGFzIHN0cmluZykuc3BsaXQoJyBmYS0nKSxcbiAgICAgIH0sXG4gICAgfVxuICB9XG5cbiAgcmV0dXJuIHJlc3VsdCBhcyBWdWV0aWZ5SWNvbnNcbn1cblxuZXhwb3J0IGRlZmF1bHQgY29udmVydFRvQ29tcG9uZW50RGVjbGFyYXRpb25zKCdmb250LWF3ZXNvbWUtaWNvbicsIGljb25zKVxuIl19

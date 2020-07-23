@@ -1,0 +1,30 @@
+import Vue from 'vue';
+/**
+ * This mixin provides `attrs$` and `listeners$` to work around
+ * vue bug https://github.com/vuejs/vue/issues/10115
+ */
+function makeWatcher(property) {
+    return function (val, oldVal) {
+        for (const attr in oldVal) {
+            if (!Object.prototype.hasOwnProperty.call(val, attr)) {
+                this.$delete(this.$data[property], attr);
+            }
+        }
+        for (const attr in val) {
+            this.$set(this.$data[property], attr, val[attr]);
+        }
+    };
+}
+export default Vue.extend({
+    data: () => ({
+        attrs$: {},
+        listeners$: {},
+    }),
+    created() {
+        // Work around unwanted re-renders: https://github.com/vuejs/vue/issues/10115
+        // Make sure to use `attrs$` instead of `$attrs` (confusing right?)
+        this.$watch('$attrs', makeWatcher('attrs$'), { immediate: true });
+        this.$watch('$listeners', makeWatcher('listeners$'), { immediate: true });
+    },
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvbWl4aW5zL2JpbmRzLWF0dHJzL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sR0FBcUIsTUFBTSxLQUFLLENBQUE7QUFFdkM7OztHQUdHO0FBRUgsU0FBUyxXQUFXLENBQUUsUUFBZ0I7SUFDcEMsT0FBTyxVQUFxQixHQUFHLEVBQUUsTUFBTTtRQUNyQyxLQUFLLE1BQU0sSUFBSSxJQUFJLE1BQU0sRUFBRTtZQUN6QixJQUFJLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLEdBQUcsRUFBRSxJQUFJLENBQUMsRUFBRTtnQkFDcEQsSUFBSSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLFFBQVEsQ0FBQyxFQUFFLElBQUksQ0FBQyxDQUFBO2FBQ3pDO1NBQ0Y7UUFDRCxLQUFLLE1BQU0sSUFBSSxJQUFJLEdBQUcsRUFBRTtZQUN0QixJQUFJLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxLQUFLLENBQUMsUUFBUSxDQUFDLEVBQUUsSUFBSSxFQUFFLEdBQUcsQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFBO1NBQ2pEO0lBQ0gsQ0FBQyxDQUFBO0FBQ0gsQ0FBQztBQUVELGVBQWUsR0FBRyxDQUFDLE1BQU0sQ0FBQztJQUN4QixJQUFJLEVBQUUsR0FBRyxFQUFFLENBQUMsQ0FBQztRQUNYLE1BQU0sRUFBRSxFQUF3QjtRQUNoQyxVQUFVLEVBQUUsRUFBdUM7S0FDcEQsQ0FBQztJQUVGLE9BQU87UUFDTCw2RUFBNkU7UUFDN0UsbUVBQW1FO1FBQ25FLElBQUksQ0FBQyxNQUFNLENBQUMsUUFBUSxFQUFFLFdBQVcsQ0FBQyxRQUFRLENBQUMsRUFBRSxFQUFFLFNBQVMsRUFBRSxJQUFJLEVBQUUsQ0FBQyxDQUFBO1FBQ2pFLElBQUksQ0FBQyxNQUFNLENBQUMsWUFBWSxFQUFFLFdBQVcsQ0FBQyxZQUFZLENBQUMsRUFBRSxFQUFFLFNBQVMsRUFBRSxJQUFJLEVBQUUsQ0FBQyxDQUFBO0lBQzNFLENBQUM7Q0FDRixDQUFDLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgVnVlLCB7IFdhdGNoSGFuZGxlciB9IGZyb20gJ3Z1ZSdcblxuLyoqXG4gKiBUaGlzIG1peGluIHByb3ZpZGVzIGBhdHRycyRgIGFuZCBgbGlzdGVuZXJzJGAgdG8gd29yayBhcm91bmRcbiAqIHZ1ZSBidWcgaHR0cHM6Ly9naXRodWIuY29tL3Z1ZWpzL3Z1ZS9pc3N1ZXMvMTAxMTVcbiAqL1xuXG5mdW5jdGlvbiBtYWtlV2F0Y2hlciAocHJvcGVydHk6IHN0cmluZyk6IFRoaXNUeXBlPFZ1ZT4gJiBXYXRjaEhhbmRsZXI8YW55PiB7XG4gIHJldHVybiBmdW5jdGlvbiAodGhpczogVnVlLCB2YWwsIG9sZFZhbCkge1xuICAgIGZvciAoY29uc3QgYXR0ciBpbiBvbGRWYWwpIHtcbiAgICAgIGlmICghT2JqZWN0LnByb3RvdHlwZS5oYXNPd25Qcm9wZXJ0eS5jYWxsKHZhbCwgYXR0cikpIHtcbiAgICAgICAgdGhpcy4kZGVsZXRlKHRoaXMuJGRhdGFbcHJvcGVydHldLCBhdHRyKVxuICAgICAgfVxuICAgIH1cbiAgICBmb3IgKGNvbnN0IGF0dHIgaW4gdmFsKSB7XG4gICAgICB0aGlzLiRzZXQodGhpcy4kZGF0YVtwcm9wZXJ0eV0sIGF0dHIsIHZhbFthdHRyXSlcbiAgICB9XG4gIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgVnVlLmV4dGVuZCh7XG4gIGRhdGE6ICgpID0+ICh7XG4gICAgYXR0cnMkOiB7fSBhcyBEaWN0aW9uYXJ5PHN0cmluZz4sXG4gICAgbGlzdGVuZXJzJDoge30gYXMgRGljdGlvbmFyeTxGdW5jdGlvbiB8IEZ1bmN0aW9uW10+LFxuICB9KSxcblxuICBjcmVhdGVkICgpIHtcbiAgICAvLyBXb3JrIGFyb3VuZCB1bndhbnRlZCByZS1yZW5kZXJzOiBodHRwczovL2dpdGh1Yi5jb20vdnVlanMvdnVlL2lzc3Vlcy8xMDExNVxuICAgIC8vIE1ha2Ugc3VyZSB0byB1c2UgYGF0dHJzJGAgaW5zdGVhZCBvZiBgJGF0dHJzYCAoY29uZnVzaW5nIHJpZ2h0PylcbiAgICB0aGlzLiR3YXRjaCgnJGF0dHJzJywgbWFrZVdhdGNoZXIoJ2F0dHJzJCcpLCB7IGltbWVkaWF0ZTogdHJ1ZSB9KVxuICAgIHRoaXMuJHdhdGNoKCckbGlzdGVuZXJzJywgbWFrZVdhdGNoZXIoJ2xpc3RlbmVycyQnKSwgeyBpbW1lZGlhdGU6IHRydWUgfSlcbiAgfSxcbn0pXG4iXX0=

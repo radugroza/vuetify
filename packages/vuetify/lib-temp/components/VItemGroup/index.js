@@ -1,0 +1,10 @@
+import VItem from './VItem';
+import VItemGroup from './VItemGroup';
+export { VItem, VItemGroup, };
+export default {
+    $_vuetify_subcomponents: {
+        VItem,
+        VItemGroup,
+    },
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvY29tcG9uZW50cy9WSXRlbUdyb3VwL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sS0FBSyxNQUFNLFNBQVMsQ0FBQTtBQUMzQixPQUFPLFVBQVUsTUFBTSxjQUFjLENBQUE7QUFFckMsT0FBTyxFQUNMLEtBQUssRUFDTCxVQUFVLEdBQ1gsQ0FBQTtBQUVELGVBQWU7SUFDYix1QkFBdUIsRUFBRTtRQUN2QixLQUFLO1FBQ0wsVUFBVTtLQUNYO0NBQ0YsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBWSXRlbSBmcm9tICcuL1ZJdGVtJ1xuaW1wb3J0IFZJdGVtR3JvdXAgZnJvbSAnLi9WSXRlbUdyb3VwJ1xuXG5leHBvcnQge1xuICBWSXRlbSxcbiAgVkl0ZW1Hcm91cCxcbn1cblxuZXhwb3J0IGRlZmF1bHQge1xuICAkX3Z1ZXRpZnlfc3ViY29tcG9uZW50czoge1xuICAgIFZJdGVtLFxuICAgIFZJdGVtR3JvdXAsXG4gIH0sXG59XG4iXX0=

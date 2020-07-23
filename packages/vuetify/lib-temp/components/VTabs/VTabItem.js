@@ -1,0 +1,18 @@
+// Extensions
+import VWindowItem from '../VWindow/VWindowItem';
+/* @vue/component */
+export default VWindowItem.extend({
+    name: 'v-tab-item',
+    props: {
+        id: String,
+    },
+    methods: {
+        genWindowItem() {
+            const item = VWindowItem.options.methods.genWindowItem.call(this);
+            item.data.domProps = item.data.domProps || {};
+            item.data.domProps.id = this.id || this.value;
+            return item;
+        },
+    },
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVlRhYkl0ZW0uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvY29tcG9uZW50cy9WVGFicy9WVGFiSXRlbS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxhQUFhO0FBQ2IsT0FBTyxXQUFXLE1BQU0sd0JBQXdCLENBQUE7QUFFaEQsb0JBQW9CO0FBQ3BCLGVBQWUsV0FBVyxDQUFDLE1BQU0sQ0FBQztJQUNoQyxJQUFJLEVBQUUsWUFBWTtJQUVsQixLQUFLLEVBQUU7UUFDTCxFQUFFLEVBQUUsTUFBTTtLQUNYO0lBRUQsT0FBTyxFQUFFO1FBQ1AsYUFBYTtZQUNYLE1BQU0sSUFBSSxHQUFHLFdBQVcsQ0FBQyxPQUFPLENBQUMsT0FBTyxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLENBQUE7WUFFakUsSUFBSSxDQUFDLElBQUssQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDLElBQUssQ0FBQyxRQUFRLElBQUksRUFBRSxDQUFBO1lBQy9DLElBQUksQ0FBQyxJQUFLLENBQUMsUUFBUSxDQUFDLEVBQUUsR0FBRyxJQUFJLENBQUMsRUFBRSxJQUFJLElBQUksQ0FBQyxLQUFLLENBQUE7WUFFOUMsT0FBTyxJQUFJLENBQUE7UUFDYixDQUFDO0tBQ0Y7Q0FDRixDQUFDLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBFeHRlbnNpb25zXG5pbXBvcnQgVldpbmRvd0l0ZW0gZnJvbSAnLi4vVldpbmRvdy9WV2luZG93SXRlbSdcblxuLyogQHZ1ZS9jb21wb25lbnQgKi9cbmV4cG9ydCBkZWZhdWx0IFZXaW5kb3dJdGVtLmV4dGVuZCh7XG4gIG5hbWU6ICd2LXRhYi1pdGVtJyxcblxuICBwcm9wczoge1xuICAgIGlkOiBTdHJpbmcsXG4gIH0sXG5cbiAgbWV0aG9kczoge1xuICAgIGdlbldpbmRvd0l0ZW0gKCkge1xuICAgICAgY29uc3QgaXRlbSA9IFZXaW5kb3dJdGVtLm9wdGlvbnMubWV0aG9kcy5nZW5XaW5kb3dJdGVtLmNhbGwodGhpcylcblxuICAgICAgaXRlbS5kYXRhIS5kb21Qcm9wcyA9IGl0ZW0uZGF0YSEuZG9tUHJvcHMgfHwge31cbiAgICAgIGl0ZW0uZGF0YSEuZG9tUHJvcHMuaWQgPSB0aGlzLmlkIHx8IHRoaXMudmFsdWVcblxuICAgICAgcmV0dXJuIGl0ZW1cbiAgICB9LFxuICB9LFxufSlcbiJdfQ==

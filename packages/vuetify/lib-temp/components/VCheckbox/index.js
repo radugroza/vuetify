@@ -1,0 +1,10 @@
+import VCheckbox from './VCheckbox';
+import VSimpleCheckbox from './VSimpleCheckbox';
+export { VCheckbox, VSimpleCheckbox };
+export default {
+    $_vuetify_subcomponents: {
+        VCheckbox,
+        VSimpleCheckbox,
+    },
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvY29tcG9uZW50cy9WQ2hlY2tib3gvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxTQUFTLE1BQU0sYUFBYSxDQUFBO0FBQ25DLE9BQU8sZUFBZSxNQUFNLG1CQUFtQixDQUFBO0FBRS9DLE9BQU8sRUFBRSxTQUFTLEVBQUUsZUFBZSxFQUFFLENBQUE7QUFDckMsZUFBZTtJQUNiLHVCQUF1QixFQUFFO1FBQ3ZCLFNBQVM7UUFDVCxlQUFlO0tBQ2hCO0NBQ0YsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBWQ2hlY2tib3ggZnJvbSAnLi9WQ2hlY2tib3gnXG5pbXBvcnQgVlNpbXBsZUNoZWNrYm94IGZyb20gJy4vVlNpbXBsZUNoZWNrYm94J1xuXG5leHBvcnQgeyBWQ2hlY2tib3gsIFZTaW1wbGVDaGVja2JveCB9XG5leHBvcnQgZGVmYXVsdCB7XG4gICRfdnVldGlmeV9zdWJjb21wb25lbnRzOiB7XG4gICAgVkNoZWNrYm94LFxuICAgIFZTaW1wbGVDaGVja2JveCxcbiAgfSxcbn1cbiJdfQ==

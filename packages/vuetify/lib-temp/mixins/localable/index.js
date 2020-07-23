@@ -1,0 +1,13 @@
+import Vue from 'vue';
+export default Vue.extend({
+    name: 'localable',
+    props: {
+        locale: String,
+    },
+    computed: {
+        currentLocale() {
+            return this.locale || this.$vuetify.lang.current;
+        },
+    },
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvbWl4aW5zL2xvY2FsYWJsZS9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEdBQUcsTUFBTSxLQUFLLENBQUE7QUFFckIsZUFBZSxHQUFHLENBQUMsTUFBTSxDQUFDO0lBQ3hCLElBQUksRUFBRSxXQUFXO0lBRWpCLEtBQUssRUFBRTtRQUNMLE1BQU0sRUFBRSxNQUFNO0tBQ2Y7SUFFRCxRQUFRLEVBQUU7UUFDUixhQUFhO1lBQ1gsT0FBTyxJQUFJLENBQUMsTUFBTSxJQUFJLElBQUksQ0FBQyxRQUFRLENBQUMsSUFBSSxDQUFDLE9BQU8sQ0FBQTtRQUNsRCxDQUFDO0tBQ0Y7Q0FDRixDQUFDLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgVnVlIGZyb20gJ3Z1ZSdcblxuZXhwb3J0IGRlZmF1bHQgVnVlLmV4dGVuZCh7XG4gIG5hbWU6ICdsb2NhbGFibGUnLFxuXG4gIHByb3BzOiB7XG4gICAgbG9jYWxlOiBTdHJpbmcsXG4gIH0sXG5cbiAgY29tcHV0ZWQ6IHtcbiAgICBjdXJyZW50TG9jYWxlICgpOiBzdHJpbmcge1xuICAgICAgcmV0dXJuIHRoaXMubG9jYWxlIHx8IHRoaXMuJHZ1ZXRpZnkubGFuZy5jdXJyZW50XG4gICAgfSxcbiAgfSxcbn0pXG4iXX0=
